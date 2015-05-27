@@ -1,37 +1,87 @@
 ---
 layout: page
-title: Theme Setup
-description: "Instructions on how to install and customize the modern Jekyll theme HPSTR."
+title: Curriculum Vitae
+description: "My professional portfolio"
 image:
-  feature: abstract-11.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature: 2-point_half.png
+  credit: imgkid
+  creditlink: http://imgkid.com/blue-tech-background.shtml
 share: true
 ---
 
-General notes and suggestions for customizing **HPSTR**.
+## Profile
 
-## Basic Setup for a new Jekyll site
-
-1. [Install Bundler](http://bundler.io) `gem install bundler` and then install [Jekyll](http://jekyllrb.com) and all dependencies `bundle install`.
-2. Fork the [HPSTR Jekyll Theme repo](https://github.com/mmistakes/hpstr-jekyll-theme/fork).
-3. Clone the repo you just forked and rename it.
-4. Edit `_config.yml` to personalize your site.
-5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, assigning categories and tags, and other YAML data.
-6. Read the documentation below for further customization pointers and documentation.
-
-<div markdown="0"><a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
-
-**Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
-{: .notice}
+Telecommunication Engineer major in Distributed Systems with interest in information technology services. Distributed
+Computing and large scale systems have become areas I really like to hear about. I am an
+ambitious Software Engineer with great interest in new problems and challenges. That is why I show a proactive
+personality where I always train myself in new trends and technologies improving my easiness to grasp technologies.
 
 ---
 
-## Setup for an Existing Jekyll site
+## Work Experience
 
-1. Clone the following folders: `_includes`, `_layouts`, '_sass', `assets`, and `images`.
-2. Clone the following folders/files and personalize content as need: `about/`, `posts/`, `tags/`, `feed.xml`. and 'index.html'.
-3. Set the following variables in your `config.yml` file:
+### Software Developer                                                                         [February 2014 - Present]
+
+**[Comeon! Stockholm AB](http://www.comeon.com/)**
+
+**Server side:** Java programming with Servlets, Tomcat and REST services based on drop wizard. Frontend: JavaScript,
+Angular JS and JQuery. ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. ***Testing*** includes Junit and Mockito for mocking.
+***Version Control*** migrated from SVN to git.
+
+### Research Engineer                                                                         [June 2013 - January 2014]
+
+**[SICS-Swedish Institute of Computer Science	](http://www.sics.se/)**
+
+**Technology:** Java, Maven, Glassfish, cloud technologies used like Amazon EC2 and Open Stack for prototyping and testing.
+
+**_Accomplishments:_**
+
+- Cluster management interface to allow provisioning a cluster through a web wizard from scratch.
+-	Implementation of an interface to retrieve deployment progress of a cluster.
+-	Bundling of an Amazon Machine Image (AMI) with our predefined software to increase the deployment speed.
+-	Bundling of a Virtual Image for Open Stack to offer the same solution as Amazon EC2.
+-	Orchestration development for deployment in Bare Metal physical machines.
+
+### Master Thesis in SICS                                                                          [Jamuary 2013 - June 2013]
+
+**[SICS-Swedish Institute of Computer Science	](http://www.sics.se/)**
+
+**Thesis Work: KTHFS Orchestration – Platform as a Service orchestration for Hadoop.**
+
+Design and implementation of a Domain Specific Language for cluster deployment platform to configure Hadoop clusters in Amazon EC2 and Open Stack cloud infrastructures.
+**_Supervisor: Dr. Jim Dowling, Examiner: Prof. Seif Haridi_**
+
+<div markdown="0"><a href="http://kth.diva-portal.org/smash/get/diva2:648868/FULLTEXT01.pdf" class="btn">Download the Thesis</a></div>
+
+**_Accomplishments:_**
+
+-	Design orchestration architecture with jclouds, chef and YAML, implemented 2 artifacts based on this design:
+	* Implemented a web portal using Java Server Faces with Primefaces that configures a web application with a monitoring application, KTHFS Dashboard.
+	* Integrated orchestration architecture in KTHFS Dashboard that allows deployment of a Hadoop cluster with chef and jclouds from a cluster defined in a YAML file.
+- Optimize the orchestration architecture, managed to reduce the deployment time by increasing the throughput through asynchronous Future constructs.
+
+### Software Developer                                                                        [July 2010 - February 2011]
+
+**[GSI - Group of Intelligent Systems at ETSIT UPM.]**
+
+**Technology:** Primarily Java programming and software development on this language
+
+---
+
+## Educational Background
+
+### Degree Master of Science, Software Engineering of Distributed Systems (M.Sc.)                [August2011- June2013]
+**[KTH – Royal Institute of Technology](http://www.kth.se/)**
+
+**_Master student in parallel with my double degree studies which includes Swedish language courses._**
+
+### Telecommunications Engineering (Equivalent to MSc level accredited by ABET/EAC)           [September 2005- June2013]
+**[Technical University of Madrid (UPM)](http://www.etsit.upm.es/index.php/en/)**
+
+**_Double Degree program KTH + UPM, Erasmus exchange program_**
+
+---
+
 
 {% highlight yaml %}
 title:            Site Title
