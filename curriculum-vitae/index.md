@@ -42,7 +42,8 @@ Angular JS and JQuery. ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. ***Te
 -	Bundling of a Virtual Image for Open Stack to offer the same solution as Amazon EC2.
 -	Orchestration development for deployment in Bare Metal physical machines.
 
-### Master Thesis in SICS                                                                          [Jamuary 2013 - June 2013]
+### Master Thesis in SICS                                                                          [January 2013 - 
+June 2013]
 
 **[SICS-Swedish Institute of Computer Science	](http://www.sics.se/)**
 
@@ -55,7 +56,7 @@ Design and implementation of a Domain Specific Language for cluster deployment p
 
 **_Accomplishments:_**
 
--	Design orchestration architecture with jclouds, chef and YAML, implemented 2 artifacts based on this design:
+- Design orchestration architecture with jclouds, chef and YAML, implemented 2 artifacts based on this design:
 	* Implemented a web portal using Java Server Faces with Primefaces that configures a web application with a monitoring application, KTHFS Dashboard.
 	* Integrated orchestration architecture in KTHFS Dashboard that allows deployment of a Hadoop cluster with chef and jclouds from a cluster defined in a YAML file.
 - Optimize the orchestration architecture, managed to reduce the deployment time by increasing the throughput through asynchronous Future constructs.
@@ -82,7 +83,43 @@ Design and implementation of a Domain Specific Language for cluster deployment p
 
 ---
 
+## Skills
 
+<p> Since I like to work at all stack levels, I have a large variety of multidisciplinary technical skills which 
+includes:
+</p>
+
+- **Operating Systems:** Ubuntu, Windows
+- **Frontend Technologies:** HTML, JavaScript (Competent), jQuery, Angular JS
+- **Programming Technologies:** Java (Experienced), Python (Adv. Beginner), Scala (Beginner), Erlang (Beginner)
+- **Cloud Technologies:** Amazon EC2 (Adv. Beginner), Amazon Dynamo (Beginner), OpenStack Nova(Adv. Beginner)
+- **Database Technologies:** MySQL(Adv. Beginner), Cassandra(Adv. Beginner), Neo4j(Beginner), MongoDB(Beginner)
+- **Version Control:** Git, SVN
+- **Scripting:** Bash scripting (Beginner)
+
+---
+
+## Publications
+
+<p> During my graduate studies, I managed to publish a paper and a journal article on a course project from Madrid, 
+UPM.
+</p>
+
+- **Development of a Wiimote-based gesture recognizer in a microprocessor laboratory course.** EDUCON IEEE 04/2010. 
+ [DOI here](http://dx.doi.org/10.1109/EDUCON.2010.5492543)
+- **Development of a Wiimote-based Gesture Recognizer in a Microprocessor Laboratory Course. International Journal of
+ Emerging Technologies in learning (iJET).**
+ [Link here](http://online-journals.org/i-jet/article/view/1521)
+
+---
+
+## Certifications
+
+- **Algorithms: Design and Analysis, part 1.** Coursera & Stanford University. March 2015.
+- **Machine Learning.** Coursera & Stanford University. Summer 2014.
+- **Functional Programming in Scala.** Coursera & EPFL. Nov 2013.
+
+---
 {% highlight yaml %}
 title:            Site Title
 description:      Describe your website here.
