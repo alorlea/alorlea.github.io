@@ -1,11 +1,11 @@
 title:            Distibuted Systems Software Engineer
 description:      My personal site where I collect my findings, inquiries, material and projects when it comes to technology
-disqus_shortname: disqus_3zvv4JksJ1
+disqus_shortname: @disqus_3zvv4JksJ1
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
+url: http://alorlea.github.io
 
 # Owner/author information
 owner:
