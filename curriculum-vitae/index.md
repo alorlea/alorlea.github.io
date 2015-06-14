@@ -168,35 +168,6 @@ orientate their preparation for interviews in IT companies.
 
 ---
 
-## Code Portfolio:
-
-If you want to have a better view of my side projects, I recommend checking out my 
-[github account](https://github.com/alorlea/) as in here I will have a brief selection of the projects I felt most 
-proud of:
-
-- **Distributed Monitor Service:** Implementation of a small web service in Python with Flask, Javascript and HTML. 
-The idea is to have a python agent monitoring the cpu usage of the nodes and send this information to this web 
-service to monitor them. [Code Link](https://github.com/alorlea/CPUMonitorService)
-
-- **Campaign Optimizer:** Here we try to allocate in an optimal manner different campaign schedules so we can 
-maximize the revenue of showing this advertisements. This solution was implemented with a dynamic programming 
-algorithm for the unbounded knapsack problem with some optimizations from S. Mortello's Knapsack problems book. [Code
- Link](https://github.com/alorlea/)
-
-- **A distributed URL Shortener:** What does it need to devise a highly available, scalable and distributed URL 
-shortener? Here I try to implement a web service using Drop wizard in order to attain a service with the previous 
-requirements. 
-The architecture involved implemented a 3 tier layered application by splitting frontend, backend and 
-data in layers. Both frontend application and backend services where implemented. The solution was tested in Amazon 
-Web services using an initial deployment of 2 frontend servers, 3 backend servers behind a load balancer where 
-backend services communicated with Amazon Dynamo, a scalable high performant No SQL DB. 
-Later on, the solution was designed also to work with Cassandra and another test was done by deployment a 4 node 
-Cassandra cluster in Amazon.
-  - [Code Link](https://github.com/alorlea/)
-  - [Solution Documentation](https://www.dropbox.com/sh/agxa7xe383qhp1g/AACqGYsLugKc9PgOXkDWWCIRa?dl=0)
-
----
-
 ## Publications
 
 <p> During my graduate studies, I managed to publish a paper and a journal article on a course project from Madrid, 
