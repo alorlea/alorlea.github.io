@@ -1,0 +1,37 @@
+---
+layout: post
+title: How to guide for the impatient configuring Virtual Machines in the cloud
+date: 2013-11-06 00:51:42.000000000 +01:00
+categories: []
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '25316034'
+author:
+  login: alorlea
+  email: a.lorenteleal@gmail.com
+  display_name: alorlea
+  first_name: ''
+  last_name: ''
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Well here we are back again after a couple of months without writing anything useful. This happens when you leave for a months holiday and you decided to completely disconnect of the everyday routine, but that is the main goal of the holidays, right?</p>
+<p>After so much delay, finally here it comes; for the next couple of posts I will start describing several of the problems I had to face when developing my master thesis before the summer.</p>
+<p>As a small reminder, to get ourselves in context with the problem that needed to be addressed; my thesis involved on definining an Orchestration Architecture so we could deploy easily and without any delays, our big data platform in cloud infrastructures like the popular Amazon EC2 or private infrastructures like an OpenStack system.</p>
+<p>We are speaking of a software application that will allow users to allocate a cluster of several machines and will automatically download and install the software so the users can easily avoid the large annoying times that someone encounter when configuring complicated new software (well in this case, we are speaking of scenarios of possibly more than 20 machines, or even thousands)</p>
+<p>So what are the problems that we can encounter? As a first glance, we could think of the following:</p>
+<ul>
+<li>How do we communicate with the cloud providers? In this case, how we can easily speak with Amazon EC2 programmatically in order to ask for the resources we want? Also how we can do the same for OpenStack or offer the same support to future providers?</li>
+<li>How do we easily configure our platform so all the machines can interact among them without any further delays?</li>
+<li>How do we make sure that the setup is correct? How do we handle possible failures during the process?</li>
+</ul>
+<p>So a simple undefined problem has started to become more complicated all of a sudden, yikees!</p>
+<p>Let's not panic are we? We are software engineers and we love this type of deals, there is no unsolvable problems, well except those NP (Non Polynomial) problems out there or if the schrodinger cat is still dead or alive in the cardboard box but thats another story. The good point is that we managed to break down a big challenge into smaller subchallenges making our lifes a little more stressful but still these smaller problems may still be painful. By the way, this approach we just used; is known as <i>Divide and Conquer </i>and it is a very useful technique when we embrace ourselves with something big and nasty like this problem, in order to get some space and getter a better overview of what is going on.</p>
+<p>After identifying our problems, we will dedicate this post to the first problem which also defines the title of this post as you would be able to discover in the next sections. So, how we can technically communicate with Amazon EC2? Luckily, Amazon offers an api that we can use in order to communicate with EC2 to allocate our resources, but now we have a new issue as probably the api that EC2 offers will not be the same as OpenStacks service api. This means that probably we will need to adapt our solution for each specific infrastructure which does not sound very appealing.</p>
+<p>Fortunately, there exists an open source solution which greatly will make our lives easier; we can make use of the Jclouds multicloud library.</p>
+<p>&nbsp;</p>
+<p>Jclouds is a java library that we can use to easily ask for nodes in the cloud Infrastructure of their choice.</p>
+<pre></pre>
