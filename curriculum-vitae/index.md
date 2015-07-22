@@ -21,7 +21,7 @@ personality where I always train myself in new trends and technologies improving
 
 ## Work Experience
 
-### Software Developer                                                                         [February 2014 - Present]
+### Software Developer                                                                        [February 2014 - Present]
 
 **[Comeon! Stockholm AB](http://www.comeon.com/)**
 
@@ -29,9 +29,11 @@ personality where I always train myself in new trends and technologies improving
 Angular JS and JQuery. ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. ***Testing*** includes Junit and Mockito for mocking.
 ***Version Control*** migrated from SVN to git.
 
-### Research Engineer                                                                         [June 2013 - January 2014]
+### Research Engineer                                                                       [June 2013 - January 2014] 
 
 **[SICS-Swedish Institute of Computer Science	](http://www.sics.se/)**
+
+**Total months:** (8 months)
 
 **Technology:** Java, Maven, Glassfish, cloud technologies used like Amazon EC2 and Open Stack for prototyping and testing.
 
@@ -43,17 +45,20 @@ Angular JS and JQuery. ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. ***Te
 -	Bundling of a Virtual Image for Open Stack to offer the same solution as Amazon EC2.
 -	Orchestration development for deployment in Bare Metal physical machines.
 
-### Master Thesis in SICS                                                                          [January 2013 - 
-June 2013]
+### Master Thesis in SICS                                                                   [January 2013 - June 2013]
 
 **[SICS-Swedish Institute of Computer Science	](http://www.sics.se/)**
+
+**Total months:** (6 months)
 
 **Thesis Work: KTHFS Orchestration – Platform as a Service orchestration for Hadoop.**
 
 Design and implementation of a Domain Specific Language for cluster deployment platform to configure Hadoop clusters in Amazon EC2 and Open Stack cloud infrastructures.
 **_Supervisor: Dr. Jim Dowling, Examiner: Prof. Seif Haridi_**
 
-<div markdown="0"><a href="http://kth.diva-portal.org/smash/get/diva2:648868/FULLTEXT01.pdf" class="btn">Download the Thesis</a></div>
+<div markdown="0">
+<a href="http://kth.diva-portal.org/smash/get/diva2:648868/FULLTEXT01.pdf" class="btn btn-info">Download the Thesis</a>
+</div>
 
 **_Accomplishments:_**
 
@@ -62,9 +67,11 @@ Design and implementation of a Domain Specific Language for cluster deployment p
 	* Integrated orchestration architecture in KTHFS Dashboard that allows deployment of a Hadoop cluster with chef and jclouds from a cluster defined in a YAML file.
 - Optimize the orchestration architecture, managed to reduce the deployment time by increasing the throughput through asynchronous Future constructs.
 
-### Software Developer                                                                        [July 2010 - February 2011]
+### Software Developer                                                         [July 2010 - February 2011] (9 months)
 
 **[GSI - Group of Intelligent Systems at ETSIT UPM.]**
+
+**Total months:** 9 months
 
 **Technology:** Primarily Java programming and software development on this language
 
@@ -132,7 +139,7 @@ service to monitor them. [Code Link](https://github.com/alorlea/CPUMonitorServic
 - **Campaign Optimizer:** Here we try to allocate in an optimal manner different campaign schedules so we can 
 maximize the revenue of showing this advertisements. This solution was implemented with a dynamic programming 
 algorithm for the unbounded knapsack problem with some optimizations from S. Mortello's Knapsack problems book. [Code
- Link](https://github.com/alorlea/)
+ Link](https://github.com/alorlea/CampaignRevenueSolver)
 
 - **A distributed URL Shortener:** What does it need to devise a highly available, scalable and distributed URL 
 shortener? Here I try to implement a web service using Drop wizard in order to attain a service with the previous 
@@ -140,10 +147,10 @@ requirements.
 The architecture involved implemented a 3 tier layered application by splitting frontend, backend and 
 data in layers. Both frontend application and backend services where implemented. The solution was tested in Amazon 
 Web services using an initial deployment of 2 frontend servers, 3 backend servers behind a load balancer where 
-backend services communicated with Amazon Dynamo, a scalable high performant No SQL DB. 
+backend services communicated with Amazon Dynamo, a scalable high performance No SQL DB. 
 Later on, the solution was designed also to work with Cassandra and another test was done by deployment a 4 node 
 Cassandra cluster in Amazon.
-  - [Code Link](https://github.com/alorlea/)
+  - [Code Link](https://github.com/alorlea/UrlShortener)
   - [Solution Documentation](https://www.dropbox.com/sh/agxa7xe383qhp1g/AACqGYsLugKc9PgOXkDWWCIRa?dl=0)
 
 ---
