@@ -112,6 +112,7 @@ includes:
 - **Database Technologies:** MySQL(Adv. Beginner), Cassandra(Adv. Beginner), Neo4j(Beginner), MongoDB(Beginner)
 - **Version Control:** Git, SVN
 - **Scripting:** Bash scripting (Beginner)
+- **Other:** Docker (Beginner), Apache Mesos (Beginner)
 
 ---
 
