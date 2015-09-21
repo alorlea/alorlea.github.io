@@ -37,3 +37,26 @@ and the need of using of a hypervisor, which in involves in an extra overhead to
 
 So containers deployed in the same machine, tend to share external resources provided by the host OS where docker is 
 running like the kernels OS, filesystem and disk usage.
+
+## Why is it becoming so popular?
+
+One thing that I believe, docker is doing great is to focus on isolation and keep the behaviour identical of your application
+along multiple phases environments.
+
+Once you create your docker image and deploy it in a container, it will behave the same in your testing, staging and 
+production environments like virtual machines, yet allowing faster deployments. For example, if we take a full ubuntu 
+VM; it size will be more than 650MBs at least with everything configured and our application embedded in it. 
+Taking the docker case, its footprint will be around the same size as if we wanted to deploy the builded package itself.
+
+In addition, it has its own version control of the docker images, allowing incremental updates of its content 
+(similarly to a version control like git); which help to keep track of the versions of your applications.
+
+## Getting started with docker
+
+It is quite simple to get started with docker and begin creating containers, if you use Intellij Idea you can use a 
+quite nice [plugin](http://blog.jetbrains.com/idea/2015/03/docker-support-in-intellij-idea-14-1/).
+
+You can start creating docker images easily by bundling it up with a dockerfile. This file acts like a script which 
+docker follows and will generate the image for your docker container.
+
+We will see that in a following post, where I will try to go over how docker works with a working example.
