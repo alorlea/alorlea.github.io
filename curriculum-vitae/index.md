@@ -25,9 +25,14 @@ personality where I always train myself in new trends and technologies improving
 
 **[Comeon! Stockholm AB](http://www.comeon.com/)**
 
-**Server side:** Java programming with Servlets, Tomcat and REST services based on drop wizard. Frontend: JavaScript,
-Angular JS and JQuery. ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. ***Testing*** includes Junit and Mockito for mocking.
-***Version Control*** migrated from SVN to git.
+Right now, I am involved in building a pipeline for automatization, deployment and configuration of services using 
+docker with cluster management frameworks for CaaS (Container as a Service) based on kubernetes for increasing the 
+throughput of our testing phases.
+
+***Server side:*** Java programming with Servlets, Tomcat and REST services based on drop wizard. ***Frontend:*** 
+JavaScript, Angular JS and JQuery. ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. ***Testing*** includes Junit 
+and Mockito for mocking.
+***Version Control:*** migrated from SVN to git. ***Process and Tools:*** Maven & Jenkins, kubernetes with docker.
 
 ### Research Engineer                                                                       [June 2013 - January 2014] 
 
@@ -112,7 +117,7 @@ includes:
 - **Database Technologies:** MySQL(Adv. Beginner), Cassandra(Adv. Beginner), Neo4j(Beginner), MongoDB(Beginner)
 - **Version Control:** Git, SVN
 - **Scripting:** Bash scripting (Beginner)
-- **Other:** Docker (Beginner), Apache Mesos (Beginner)
+- **Other:** Docker (Adv. Beginner), Kubernetes (Beginner)
 
 ---
 
@@ -121,6 +126,7 @@ includes:
 Contributing to open source projects from SICS in relation to my old Master Thesis work and time at SICS.
 
 - **Karamel:** Karamel orchestrates the execution of Chef Cookbooks using jClouds. 
+My contributing branch for Openstack functionality: [Branch Link](https://github.com/karamelchef/karamel/tree/feature_openstack-support) 
 [Project Link](https://github.com/karamelchef)
 
 - **HOPS Hadoop:** Hadoop Open Platform-as-a-Service. [Project Link](https://github.com/karamelchef)
