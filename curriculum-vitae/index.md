@@ -26,13 +26,15 @@ personality where I always train myself in new trends and technologies improving
 **[Comeon! Stockholm AB](http://www.comeon.com/)**
 
 Right now, I am involved in building a pipeline for automatization, deployment and configuration of services using 
-docker with cluster management frameworks for CaaS (Container as a Service) based on kubernetes for increasing the 
+docker with cluster management frameworks for CaaS (Container as a Service) based on Kubernetes for increasing the 
 throughput of our testing phases.
 
-***Server side:*** Java programming with Servlets, Tomcat and REST services based on drop wizard. ***Frontend:*** 
-JavaScript, Angular JS and JQuery. ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. ***Testing*** includes Junit 
-and Mockito for mocking.
-***Version Control:*** migrated from SVN to git. ***Process and Tools:*** Maven & Jenkins, kubernetes with docker.
+- ***Server side:*** Java programming with Servlets, Tomcat and REST services based on drop wizard. 
+- ***Frontend:*** JavaScript, Angular JS and JQuery. 
+- ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. 
+- ***Testing*** includes Junit and Mockito for mocking.
+- ***Version Control:*** migrated from SVN to git. 
+- ***Process and Tools:*** Maven & Jenkins, kubernetes with docker.
 
 ### Research Engineer                                                                       [June 2013 - January 2014] 
 
@@ -58,7 +60,9 @@ and Mockito for mocking.
 
 **Thesis Work: KTHFS Orchestration – Platform as a Service orchestration for Hadoop.**
 
-Design and implementation of a Domain Specific Language for cluster deployment platform to configure Hadoop clusters in Amazon EC2 and Open Stack cloud infrastructures.
+Design and implementation of a Domain Specific Language for cluster deployment platform to configure Hadoop clusters in 
+Amazon EC2 and Open Stack cloud infrastructures.
+
 **_Supervisor: Dr. Jim Dowling, Examiner: Prof. Seif Haridi_**
 
 <div markdown="0">
@@ -72,9 +76,9 @@ Design and implementation of a Domain Specific Language for cluster deployment p
 	* Integrated orchestration architecture in KTHFS Dashboard that allows deployment of a Hadoop cluster with chef and jclouds from a cluster defined in a YAML file.
 - Optimize the orchestration architecture, managed to reduce the deployment time by increasing the throughput through asynchronous Future constructs.
 
-### Software Developer                                                         [July 2010 - February 2011] (9 months)
+### Software Developer                                                         [July 2010 - February 2011] 
 
-**[GSI - Group of Intelligent Systems at ETSIT UPM.]**
+**[GSI - Group of Intelligent Systems at ETSIT UPM.](http://www.gsi.dit.upm.es/en/)**
 
 **Total months:** 9 months
 
@@ -162,9 +166,9 @@ Cassandra cluster in Amazon.
 
 ---
 
-## Presentations/Talks
+## Tech Talks
 
-I have done multiple talks both internally at my workplace and as a IEEE Volunteer for students.
+I have done multiple talks both internally at my workplace and as a IEEE Volunteer for students & young professionals.
 
 - **Introduction to Distributed Data Processing:** Small presentation as an overview to present Spark, Hadoop and 
 Flink as a general picture of the different frameworks with special focus on examples and libraries for Apache Spark.
@@ -182,23 +186,10 @@ orientate their preparation for interviews in IT companies.
 
 ---
 
-## Publications
-
-<p> During my graduate studies, I managed to publish a paper and a journal article on a course project from Madrid, 
-UPM.
-</p>
-
-- **Development of a Wiimote-based gesture recognizer in a microprocessor laboratory course.** EDUCON IEEE 04/2010. 
- [DOI here](http://dx.doi.org/10.1109/EDUCON.2010.5492543)
-- **Development of a Wiimote-based Gesture Recognizer in a Microprocessor Laboratory Course. International Journal of
- Emerging Technologies in learning (iJET).**
- [Link here](http://online-journals.org/i-jet/article/view/1521)
-
-
----
-
 ## Competitions
 
+- **Judge IEEExtreme 9.0.** Design programming problems for IEEExtreme 24 hour online competition with 6500+ teams 
+worldwide hosted by IEEE.
 - **Judge and Quality Assessor IEEExtreme 8.0.** Design and evaluate programming problems for IEEExtreme 24 hour 
 online competition with 6500+ teams worldwide hosted by IEEE.
 - **Contestant of IEEExtreme.** Part of a 3 member team on multiple editions of IEEExtreme including 6.0, 4.0 and 3.0
