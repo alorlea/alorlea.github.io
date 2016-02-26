@@ -130,8 +130,7 @@ includes:
 Contributing to open source projects from SICS in relation to my old Master Thesis work and time at SICS.
 
 - **Karamel:** Karamel orchestrates the execution of Chef Cookbooks using jClouds. 
-My contributing branch for Openstack functionality: [Branch Link](https://github.com/karamelchef/karamel/tree/feature_openstack-support) 
-[Project Link](https://github.com/karamelchef)
+My contribution includes adding preliminary support to Openstack: [Project Link](https://github.com/karamelchef)
 
 - **HOPS Hadoop:** Hadoop Open Platform-as-a-Service. [Project Link](https://github.com/karamelchef)
 
