@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Openstack Hadoop Cluster Orchestration With Karamel
+title: Openstack Apache Hadoop & Flink Cluster Orchestration With Karamel
 modified:
 categories: open-source
 description:
-tags: [Karamel, Openstack, Hadoop, Chef, Automation]
+tags: [Karamel, Openstack, Apache Hadoop, Chef, Automation, Apache Flink]
 image:
   feature:
   credit:
   creditlink:
-comments:
-share:
+comments: true
+share: true
 published: false
-date: 2016-02-08T17:26:30+01:00
+date: 2016-04-10T17:26:30+01:00
 ---
 
 This is a special post as it remarks my first contribution to a small open-source project and also to my ex-colleagues 
@@ -24,16 +24,16 @@ a very fine tool that simplifies big data deployments on a selection of cloud pr
 in addition to baremetal cluster setups. It is quite easy to get started, you simply need to define your cluster in a 
 file, submit it to the application and do one click!
 
-With this tool you can easily have up a functional big data clusters with hadoop with flink or even apache spark. 
+With this tool you can easily have up a functional big data cluster runing hadoop , Apache Flink or even Apache Spark.
 In addition, it is the preferred tool for testing out a new hadoop distribution named [Hops](http://www.hops.io/) 
-which address the inconveniences that big hadoop deployments encounter (for example, how to achieve [high 
-availability of the namenode](http://www.hops.io/?q=content/hdfs))
+which try to address the challenges you could face when you work with very large hadoop clusters (for 
+example, how to achieve [high availability of the namenode](http://www.hops.io/?q=content/hdfs))
 
-# Introduction
+# Deploying Clusters with Karamel
 
-Here I will try to describe what you need in order to make a deployment using Karamel towards an Openstack 
-environment. I will go over how you can write a cluster file to be deployed using this tool and how you need to 
-configure the Karamel in order to communicate with your cluster.
+In the rest of this article, I will describe the process of creating a simple cluster running apache Flink in order to 
+make a deployment using Karamel towards an Openstack environment. We will also go over how you can write a cluster file
+ to be deployed using this tool and how you need to configure the Karamel in order to communicate with your cluster.
 
 ## Before we start
 
@@ -46,12 +46,16 @@ support for Openstack (version 0.2.0 onwards should do it) or download the sourc
 # Working with Karamel
 
 Getting started with Karamel is quite easy, before launching our cluster, we will need to define the configuration of a
-cluster. In a cluster definition file, we can identify 4 core elements to describe you cluster: Provider, Cookbooks, 
-Attributes and Groups. 
+cluster. In a cluster definition file, we can identify 4 core elements to describe you cluster: **_Provider_**, 
+**_Cookbooks_**, **_Attributes_** and **_Groups_**. 
 
-We will go the meaning of each component through an example cluster, let's imagine that I want to deploy a 
-simple Hadoop cluster with Apache Flink running a namenode and 20 datanodes using an Openstack infrastructure. In 
-addition, we want to deploy a wordcount job when the cluster is ready.
+In order to understand the role of each core component, we will go through a simple example cluster, let's imagine 
+that I want to deploy a simple Hadoop cluster with Apache Flink running a namenode and 20 datanodes using an 
+Openstack Infrastructure. 
+
+So how can I express this information in Karamel? In addition, if we want to deploy a 
+wordcount job when the cluster is ready, how can we achieve this? How can Karamel allow us to express this business 
+needs? This is how you would do it, as shown on the following file: 
 
 {% highlight yaml %}
 
@@ -83,11 +87,18 @@ groups:
         
 {% endhighlight %}
 
-In this case, we can see 3 different code blocks gathering all the information we need for Karamel to do its job. 
+In this cluster, we can see 3 different code blocks gathering all the information we need for Karamel to satisfy our 
+cluster needs. 
+
+
+## Provider
 
 The first segment of the file contains the provider specific information, for Openstack; we make use of the
-  keyword nova to refer we are going to make use of the Openstack Nova Controller. Then, it will follow specific 
-  parameters regarding nova which are:
+  keyword nova in order to tell Karamel that this is an Openstack cluster and we are going to make use of the Openstack 
+  Nova Controller. 
+
+  After the keyword nova, it follows key parameters that Openstack will make use to deplou the necessary resources to
+   run our software on.
   
   * __Flavor:__ This corresponds to a specific hardware configuration for the VM, this is similar to Amazon's EC2 
   instance descriptors. Openstack refers to them as flavors and each one specifies a configuration (CPU, RAM) and are
@@ -95,6 +106,16 @@ The first segment of the file contains the provider specific information, for Op
     use of the flavor id attached to your VM configuration.
    
   * __Image:__ This corresponds to the VM image you want to launch stored in your Openstack system. In this case, we 
-  make use of the generated ID when you store your image in Openstack.
+  make use of the generated ID when you store your image in your Openstack project.
+  
+  ## Cookbooks
+  
+  The following code block, gathers the software that we will want to install on our nodes. For this purpose, 
+  Karamel makes use of Chef Cookbooks that get will be processed on the nodes by running Chef Solo. To simplify the 
+  transfer of the Cookbooks, they should be accessible by the application through Git so it can clone them and 
+  execute the recipes on the nodes.
+  
+  For this example, we want to install Apache Hadoop and Apache Flink so we indicate this Karamel by the keyword 
+  Cookbook and specifying the repositories where our Cookbooks are stored plus the branch we want to checkout.
   
 

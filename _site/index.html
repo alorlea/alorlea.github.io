@@ -147,111 +147,6 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2016-02-08T16:26:30+00:00"><a href="/open-source/openstack-cluster-orchestration-with-karamel/">February 08, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Alberto Lorente Leal">Alberto Lorente Leal</a></span></span>
-      
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~3 minutes
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/open-source/openstack-cluster-orchestration-with-karamel/" rel="bookmark" title="Openstack Hadoop Cluster Orchestration With Karamel" itemprop="url">Openstack Hadoop Cluster Orchestration With Karamel</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>This is a special post as it remarks my first contribution to a small open-source project and also to my ex-colleagues 
-during my brief time at <a href="https://www.sics.se/">SICS</a>. This project is a follows up on my Master Thesis which was 
-centered on orchestrating Hadoop in Platform as a Service solutions.</p>
-
-<p>This idea has evolved and been refined into a more mature project called <a href="http://www.karamel.io/">Karamel</a>. Karamel is 
-a very fine tool that simplifies big data deployments on a selection of cloud providers like AWS and Google Cloud Engine, 
-in addition to baremetal cluster setups. It is quite easy to get started, you simply need to define your cluster in a 
-file, submit it to the application and do one click!</p>
-
-<p>With this tool you can easily have up a functional big data clusters with hadoop with flink or even apache spark. 
-In addition, it is the preferred tool for testing out a new hadoop distribution named <a href="http://www.hops.io/">Hops</a> 
-which address the inconveniences that big hadoop deployments encounter (for example, how to achieve <a href="http://www.hops.io/?q=content/hdfs">high 
-availability of the namenode</a>)</p>
-
-<h1 id="introduction">Introduction</h1>
-
-<p>Here I will try to describe what you need in order to make a deployment using Karamel towards an Openstack 
-environment. I will go over how you can write a cluster file to be deployed using this tool and how you need to 
-configure the Karamel in order to communicate with your cluster.</p>
-
-<h2 id="before-we-start">Before we start</h2>
-
-<p>In order to deploy our Hadoop cluster on Openstack, first we will need to get a copy of the latest version of 
-Karamel, you can do it <a href="http://www.karamel.io/?q=content/getting-started-karamel">here</a>. Here you will find 
-guidelines to get started with other providers like AWS. You may download one of the available versions that have 
-support for Openstack (version 0.2.0 onwards should do it) or download the source code and build the application with
- maven.</p>
-
-<h1 id="working-with-karamel">Working with Karamel</h1>
-
-<p>Getting started with Karamel is quite easy, before launching our cluster, we will need to define the configuration of a
-cluster. In a cluster definition file, we can identify 4 core elements to describe you cluster: Provider, Cookbooks, 
-Attributes and Groups.</p>
-
-<p>We will go the meaning of each component through an example cluster, let’s imagine that I want to deploy a 
-simple Hadoop cluster with Apache Flink running a namenode and 20 datanodes using an Openstack infrastructure. In 
-addition, we want to deploy a wordcount job when the cluster is ready.</p>
-
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">flinknova</span>
-<span class="l-Scalar-Plain">nova</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">flavor</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-  <span class="l-Scalar-Plain">image</span><span class="p-Indicator">:</span> <span class="s">&quot;99f4625e-f425-472d-8e21-7aa9c3db1c3e&quot;</span>
-
-<span class="l-Scalar-Plain">cookbooks</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">hadoop</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">github</span><span class="p-Indicator">:</span> <span class="s">&quot;hopshadoop/apache-hadoop-chef&quot;</span>
-    <span class="l-Scalar-Plain">branch</span><span class="p-Indicator">:</span> <span class="s">&quot;master&quot;</span>
-  <span class="l-Scalar-Plain">flink</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">github</span><span class="p-Indicator">:</span> <span class="s">&quot;hopshadoop/flink-chef&quot;</span>
-    <span class="l-Scalar-Plain">branch</span><span class="p-Indicator">:</span> <span class="s">&quot;master&quot;</span>
-
-<span class="l-Scalar-Plain">groups</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">namenodes</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">size</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
-    <span class="l-Scalar-Plain">recipes</span><span class="p-Indicator">:</span>
-        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">hadoop::nn</span>
-        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">flink::jobmanager</span>
-        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">flink::wordcount</span>
-  <span class="l-Scalar-Plain">datanodes</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">size</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">20</span>
-    <span class="l-Scalar-Plain">recipes</span><span class="p-Indicator">:</span>
-        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">hadoop::dn</span>
-        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">flink::taskmanager</span></code></pre></div>
-
-<p>In this case, we can see 3 different code blocks gathering all the information we need for Karamel to do its job.</p>
-
-<p>The first segment of the file contains the provider specific information, for Openstack; we make use of the
-  keyword nova to refer we are going to make use of the Openstack Nova Controller. Then, it will follow specific 
-  parameters regarding nova which are:</p>
-
-<ul>
-  <li>
-    <p><strong>Flavor:</strong> This corresponds to a specific hardware configuration for the VM, this is similar to Amazon’s EC2 
-  instance descriptors. Openstack refers to them as flavors and each one specifies a configuration (CPU, RAM) and are
-   not the same for everyone, as these are configured by the needs of the organization. To simplify this, Karamel makes
-use of the flavor id attached to your VM configuration.</p>
-  </li>
-  <li>
-    <p><strong>Image:</strong> This corresponds to the VM image you want to launch stored in your Openstack system. In this case, we 
-  make use of the generated ID when you store your image in Openstack.</p>
-  </li>
-</ul>
-
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2015-08-13T13:05:10+01:00"><a href="/posts/developing-applications-with-docker/">August 13, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Alberto Lorente Leal">Alberto Lorente Leal</a></span></span>
       
       <span class="entry-reading-time">
@@ -358,6 +253,38 @@ some material from back there.</p>
 
 <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com" class="notice">Background images from 
 <span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></div>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-07-14T21:29:09+01:00"><a href="/programming/looking-forward-to-code-improve-your-coding-skills-not-kidding/">July 14, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Alberto Lorente Leal">Alberto Lorente Leal</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~3 minutes
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/programming/looking-forward-to-code-improve-your-coding-skills-not-kidding/" rel="bookmark" title="Looking forward to code? Improve your coding skills, not kidding." itemprop="url">Looking forward to code? Improve your coding skills, not kidding.</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>Computers have been around us for along time, and even now more electronic devices in the forms of tablets, mobile phones, smart watches, etc are starting to get popular bringing together this new notion that is starting to be defined as the internet of things. More and more, we have more devices are starting to be interconnected between each other through the internet on a large broad of networks which start to produce large amounts of information. This were the concept of Big data processing is also gaining a big momentum.</p>
+<p>Most of you will ask, what does this have to do with the title of the post? Well, all this technologies have something in common and is that most of it services are based on software elements which where coded by someone in the end. This is why coding is important in technology as it allows us to create all this cool things. Not even that, one of the most demanding media entertaining markets; videogame are based on software and coding skills to bring virtual worlds to life.</p>
+<p>This brief introduction is to clearly state that if you are someone approaching to achieve a major in computer science, information technology or you want to become a software engineer, <del>you will need to code at sometime</del> coding will be your greatest and most valuable tool and you need to become good at it. Why is that? Well lets take for example a carpenter, his role is to build great and elaborate things out from wood by using the tools available to it. What makes the difference of a good from a bad carpenter is that no matter the tools you give him, his art quality is directly related to how good, his carpenter skills are. So In order for this carpenter to become an expert, it mostly depends on how much dedication and effort he focuses on improving his carpenter skills.</p>
+<p>This is similar to software, in order to become better at coding; you need to practice along the way. Luckily with the ourburst of the internet, there is a wide range of resources where we can get started ourselves quite easily.</p>
+<p>Here I give out some tips:</p>
+<p><span style="line-height:1.5em;"><strong>- Learn a language which you like:</strong> Luckily, I learned Java at university which was a good choice to start with and also you get grasp on Object Oriented Programming (OOP). There are other nice options like Python (quite simple also). C++ is also interesting but from my point of view it might be to rough to those who are a bit unsure how to program. The important here is to motivate yourself using a tool that you feel like home. Also now with Massive Online Courses like coursera offers, one can easily pick a language and try it. Even better, have a look at this link and pick your language! <a href="http://programming-motherfucker.com/become.html">http://programming-motherfucker.com/become.html</a></span></p>
+<p><strong>-Follow some tutorials/books: </strong>There are many websites with a vast amount of resources, if you take Java; I recommend the <a href="http://docs.oracle.com/javase/tutorial/">oracle Java tutorial</a> which it is quite good. If you go for python, read <em><a href="http://learnpythonthehardway.org/book/">"learn python the hard way"</a> </em>very good resource.</p>
+<p><strong>-Compete in programming competitions:</strong> This is one of the best ways to learn programming and in the same way, you learn and develop problem solving skills. There are plenty of puzzles out there that do not need very complex solutions but they do require some previous knowledge in algorithms. Still try to solve the problem and break it up, is hard and there is a reward in the end which is receiving your own satisfaction after been capable of solving extreme challenges you never thought before. There are some sites which allows you to solve problems of this type, I recommend <a href="http://www.topcoder.com/">TopCoder</a>, <a href="http://www.codechef.com/">CodeChef</a> and <a href="http://codercharts.com/">CoderCharts</a> to start with.</p>
+<p><b>-Take an algorithms course:</b> This courses are fun in the end as you learn techniques to solve problems that seem impossible with a couple of lines of code! Also it is key for solving complex problems in programming competitions. Now with coursera, there are many courses in this area and they are of course free to take!</p>
+<p>This few tips, will give you a head start on your career path on IT and technology!</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
