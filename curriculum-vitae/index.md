@@ -21,20 +21,47 @@ personality where I always train myself in new trends and technologies improving
 
 ## Work Experience
 
-### Software Developer                                                                        [February 2014 - Present]
+### Software Developer                                                                        [June 2016 - Present]
+
+**[iZettle AB](https://www.izettle.com/se)**
+
+Currently working in the Tech department of iZettle in the platform team.
+Working with Java, Dropwizard, Docker, InfluxDB, Grafana, Splunk, AWs, 
+Docker and Docker clustering technologies for Microservices.
+
+### Software Developer                                                                        [February 2014 - June 2016]
 
 **[Comeon! Stockholm AB](http://www.comeon.com/)**
 
-Right now, I am involved in building a pipeline for automatization, deployment and configuration of services using 
-docker with cluster management frameworks for CaaS (Container as a Service) based on Kubernetes for increasing the 
-throughput of our testing phases.
+During my time at Comeon! I was involved in multiple areas of the system
+which included several accomplishments:
+- Building a pipeline for multiple test environments based on Jenkins, Docker
+& Kubernetes for distributed container management in Google Cloud. 
+This allowed to have immutable, isolated test environments
+for our teams to test multiple features and automated tests in parallel 
+and remove the contention of teams working on one unique test environment.
 
-- ***Server side:*** Java programming with Servlets, Tomcat and REST services based on drop wizard. 
+- Design and implemenation of a microservice to migrate our KYC document storage. 
+Stack included a REST Stateless Webservice in Dropwizard with a replicated 
+MongoDB in GridFS clustering mode in replica sets.
+In addition, the REST client was implemented with Netflix Hystrix; 
+integration test where setup to work with a mongo DB docker container.
+
+- Tech talks given in the company regarding No SQL databases, Git and Gitlab (See talks section)
+- Refactoring of legacy code in parts of the old payment web service API to adapt it
+to the new frontend payment flow.
+- Refactoring and clean of code architecture of mobile application based 
+in Angular JS.
+
+Technologies used:
+
+- ***Server side:*** Java programming with Servlets, Netflix Hystrix,
+ Tomcat and REST services based on dropwizard. 
 - ***Frontend:*** JavaScript, Angular JS and JQuery. 
-- ***Data layer*** uses mainly MySQL, Neo4j, MongoDB. 
+- ***Data layer*** uses mainly MySQL, MongoDB. 
 - ***Testing*** includes Junit and Mockito for mocking.
 - ***Version Control:*** migrated from SVN to git. 
-- ***Process and Tools:*** Maven & Jenkins, kubernetes with docker.
+- ***Process and Tools:*** Maven & Jenkins, Kubernetes with docker.
 
 ### Research Engineer                                                                       [June 2013 - January 2014] 
 
@@ -118,10 +145,10 @@ includes:
 - **Frontend Technologies:** HTML, JavaScript (Competent), jQuery, Angular JS
 - **Programming Technologies:** Java (Experienced), Python (Adv. Beginner), Scala (Beginner), Erlang (Beginner)
 - **Cloud Technologies:** Amazon EC2 (Adv. Beginner), Amazon Dynamo (Beginner), OpenStack Nova(Adv. Beginner)
-- **Database Technologies:** MySQL(Adv. Beginner), Cassandra(Adv. Beginner), Neo4j(Beginner), MongoDB(Beginner)
+- **Database Technologies:** MySQL(Competent), Cassandra(Adv. Beginner), Neo4j(Beginner), MongoDB(Competent)
 - **Version Control:** Git, SVN
 - **Scripting:** Bash scripting (Beginner)
-- **Other:** Docker (Adv. Beginner), Kubernetes (Beginner)
+- **Other:** Docker (Competent), Kubernetes (Competent), Ansible (Adv. Beginner)
 
 ---
 
