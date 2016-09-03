@@ -11,22 +11,22 @@ image:
   creditlink:
 comments: true
 share: true
-published: false
+published: true
 date: 2016-04-10T17:26:30+01:00
 ---
 
 This is a special post as it remarks my first contribution to a small open-source project and also to my ex-colleagues 
-during my brief time at [SICS](https://www.sics.se/). This project is a follows up on my Master Thesis which was 
-centered on orchestrating Hadoop in Platform as a Service solutions.
+during my brief time at [SICS](https://www.sics.se/). 
  
-This idea has evolved and been refined into a more mature project called [Karamel](http://www.karamel.io/). Karamel is 
-a very fine tool that simplifies big data deployments on a selection of cloud providers like AWS and Google Cloud Engine, 
+This project is called [Karamel](http://www.karamel.io/). Karamel is 
+a tool that simplifies big data deployments on a selection of cloud providers like AWS and Google Cloud Engine, 
 in addition to baremetal cluster setups. It is quite easy to get started, you simply need to define your cluster in a 
 file, submit it to the application and do one click!
 
-With this tool you can easily have up a functional big data cluster runing hadoop , Apache Flink or even Apache Spark.
+With this tool you can easily have al big data cluster up and running in 
+a few clicks which will have preinstalled hadoop , Apache Flink or even Apache Spark.
 In addition, it is the preferred tool for testing out a new hadoop distribution named [Hops](http://www.hops.io/) 
-which try to address the challenges you could face when you work with very large hadoop clusters (for 
+which try to address the challenges and issues you could face when you work with very large scale hadoop clusters (for 
 example, how to achieve [high availability of the namenode](http://www.hops.io/?q=content/hdfs))
 
 # Deploying Clusters with Karamel
@@ -118,4 +118,21 @@ The first segment of the file contains the provider specific information, for Op
   For this example, we want to install Apache Hadoop and Apache Flink so we indicate this Karamel by the keyword 
   Cookbook and specifying the repositories where our Cookbooks are stored plus the branch we want to checkout.
   
+## Cookbooks
 
+This segment, allows you to define the cookbook directories which karamel will
+use in order to install your software in the nodes. In this case, we specify
+to grab the hadoop and flink recipes from their corresponding github repositories.
+
+## Groups
+
+Under the groups sections, we define the cluster structure around groups 
+of components and services. Here, we specify the number of nodes and the
+recipes that will install the services to run on those nodes.
+
+###Summary
+
+In this, blog post we went over roughly how Karamel now has support to deploy
+clusters in Openstack based infrastructures. This gives you the opportunity
+to play with hadoop, flink or spark directly in your private cloud reducing the
+time you need to configure a whole cluster.
