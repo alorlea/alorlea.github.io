@@ -108,7 +108,7 @@ The first segment of the file contains the provider specific information, for Op
   * __Image:__ This corresponds to the VM image you want to launch stored in your Openstack system. In this case, we 
   make use of the generated ID when you store your image in your Openstack project.
   
-  ## Cookbooks
+## Cookbooks
   
   The following code block, gathers the software that we will want to install on our nodes. For this purpose, 
   Karamel makes use of Chef Cookbooks that get will be processed on the nodes by running Chef Solo. To simplify the 
@@ -117,12 +117,6 @@ The first segment of the file contains the provider specific information, for Op
   
   For this example, we want to install Apache Hadoop and Apache Flink so we indicate this Karamel by the keyword 
   Cookbook and specifying the repositories where our Cookbooks are stored plus the branch we want to checkout.
-  
-## Cookbooks
-
-This segment, allows you to define the cookbook directories which karamel will
-use in order to install your software in the nodes. In this case, we specify
-to grab the hadoop and flink recipes from their corresponding github repositories.
 
 ## Groups
 
@@ -130,7 +124,7 @@ Under the groups sections, we define the cluster structure around groups
 of components and services. Here, we specify the number of nodes and the
 recipes that will install the services to run on those nodes.
 
-###Summary
+# Summary
 
 In this, blog post we went over roughly how Karamel now has support to deploy
 clusters in Openstack based infrastructures. This gives you the opportunity
