@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apache Hadoop & Flink Cluster Orchestration With Karamel on Openstack
+title: Apache Hadoop & Flink automation in OpenStack with Karamel
 modified:
 categories: open-source
 description:
