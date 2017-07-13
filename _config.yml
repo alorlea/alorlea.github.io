@@ -5,7 +5,7 @@ reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
+url: https://alorlea.github.io
 
 # Owner/author information
 owner:
@@ -15,13 +15,13 @@ owner:
   email:          a.lorenteleal@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        alorlea
-  facebook:       
+  facebook:
   github:         alorlea
-  stackexchange:  
+  stackexchange:
   linkedin:       alorlea
-  instagram:      
-  flickr:         
-  tumblr:         
+  instagram:
+  flickr:
+  tumblr:
   # google plus id, include the '+', eg +mmistakes
   google_plus:
 
@@ -30,9 +30,9 @@ background: gplaypattern2X.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-75885533-1
-google_verify:      
+google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Stockholm
