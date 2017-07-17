@@ -198,19 +198,28 @@ Cassandra cluster in Amazon.
 
 I have done multiple talks both internally at my workplace and as a IEEE Volunteer for students & young professionals.
 
+- **Containers @ iZettle:** Small presentation for an AWS meetup event, it covered
+how we embraced docker containers in production with ECS at iZettle. We went over
+the different design decisions we took to setup our infrastructure on Containers
+and problems we faced when implementing this solution. In addition, we spoke on
+different improvements that would be great to include in the short term inside
+iZettle. [SlideShare](https://www.slideshare.net/AlbertoLorenteLeal/aws-meetup-containersizettle)
 - **Introduction to Distributed Data Processing:** Small presentation as an overview to present Spark, Hadoop and
 Flink as a general picture of the different frameworks with special focus on examples and libraries for Apache Spark.
-[Prezi Link Here](http://prezi.com/yhq_6l_cby39/?utm_campaign=share&utm_medium=copy&rc=ex0share)
+[Prezi](http://prezi.com/yhq_6l_cby39/?utm_campaign=share&utm_medium=copy&rc=ex0share)
 - **Crash to No SQL:** Talk focusing on the No SQL ecosystem focusing on the different data models, CAP Theorem and
 later on zooming on different database implementations like Cassandra, Riak or MongoDB.
-[Prezi Link Here](http://prezi.com/yhq_6l_cby39/?utm_campaign=share&utm_medium=copy&rc=ex0share)
+[Prezi](http://prezi.com/yhq_6l_cby39/?utm_campaign=share&utm_medium=copy&rc=ex0share)
 - **Apache Thrift and HTTP 2.0:** Informative talk for discussing on possible technologies that could be handy when
 trying to communicate between our systems in frontend and backend.
-[Google Slides Here](https://drive.google.com/open?id=112zFPVSTLVExHzhC_NLVIGDnTY6vONa-h7DqR_sN9X0&authuser=0)
+[Google Slides](https://drive.google.com/open?id=112zFPVSTLVExHzhC_NLVIGDnTY6vONa-h7DqR_sN9X0&authuser=0)
 - **Introduction to Git and Gitlab:** Presentation to show git and gitlab as a possible transition from SVN.
-[Prezi Link Here](http://prezi.com/qoqisors8nha/?utm_campaign=share&utm_medium=copy&rc=ex0share)
-- **Tech Interview Workshop:** Small presentation given to students in order to give them tips of how to prepare and
-orientate their preparation for interviews in IT companies.
+[Prezi](http://prezi.com/qoqisors8nha/?utm_campaign=share&utm_medium=copy&rc=ex0share)
+- **Tech Interview Workshop:** Small presentation given to students in order to give them tips of how to prepare and orientate their preparation for interviews in IT companies.
+- **Career Development Workshop:** Small Workshop giving an overview of how life
+looks like when leaving college and aiming for their first job. To succeed in the
+workplace and career, new skills will be required to be developed if you want
+to see your Professional career evolve as you desire.
 
 ---
 
