@@ -3,9 +3,9 @@ layout: page
 title: Curriculum Vitae
 description: "My professional portfolio"
 image:
-  feature: 2-point_half.png
-  credit: imgkid
-  creditlink: http://imgkid.com/blue-tech-background.shtml
+  feature: Computing-Facility.jpg
+  credit: wikimedia
+  creditlink: https://upload.wikimedia.org/wikipedia/commons/e/e5/Nanoscience_High-Performance_Computing_Facility.jpg
 share: true
 comments: false
 ---
